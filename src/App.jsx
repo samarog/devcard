@@ -75,6 +75,7 @@ function App() {
               >
                 Portfolio
               </button>
+              <button className="btn">Résumé</button>
               <button
                 className="btn"
                 onClick={async () => {

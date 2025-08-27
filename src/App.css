@@ -161,6 +161,8 @@ h1 {
 }
 
 .portfolio-page {
+  height: 75vh;
+  width: 75vh;
   margin-top: 3rem;
   padding: 2rem;
   border-radius: 12px;
