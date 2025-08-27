@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Footer from "./components/Footer.jsx";
+import Game from "./components/Game.jsx";
 import "./App.css";
 
 function App() {
@@ -99,11 +100,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <div className="portfolio-page">
-          <h2>🚀 Welcome to the other page!</h2>
-          <p>This is completely separate from the intro.</p>
-          <button onClick={() => setShowPortfolio(false)}>⬅ Back</button>
-        </div>
+        <Game />
       )}
     </>
   );
