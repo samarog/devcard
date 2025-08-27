@@ -12,13 +12,12 @@ function App() {
 
   useEffect(() => {
     const text = fullTitle;
-    const pool =
-      "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrtsuvwxzy";
-    const arr = Array.from(text, () => ""); // cria array com o meu nome
+    const pool = "0123456789abcdefghijklmnopqrtsuvwxzy";
+    const arr = Array.from(text, () => ""); // cria uma array vazia do tamanho do meu nome para manipular cada substr
 
     // CONTROLOS DO EFEITO
     const cycle = 10; // numero de ciclo de caracteres para o shuffle
-    const delay = 140; // atraso entre letras
+    const delay = 200; // atraso entre letras
     const velocity = 70; // velocidade do shuffle
 
     setTitle(arr.join(""));
@@ -27,23 +26,26 @@ function App() {
     const intervals = [];
 
     for (let i = 0; i < text.length; i++) {
-      const to = setTimeout(() => {
+      const nextIndex = setTimeout(() => {
         let ticks = 0;
-        const iv = setInterval(() => {
+        const letterCycle = setInterval(() => {
           if (ticks < cycle) {
             arr[i] = pool[Math.floor(Math.random() * pool.length)];
             setTitle(arr.join(""));
+            console.log(arr);
             ticks++;
           } else {
-            arr[i] = text[i]; // trava na letra final
+            arr[i] = text[i]; // substitui uma última vez agora em text, assim garanto sempre que fica certo
             setTitle(arr.join(""));
-            clearInterval(iv);
-            if (i === text.length - 1) setFinished(true);
+            clearInterval(letterCycle);
+            if (i === text.length - 1) {
+              setFinished(true);
+            }
           }
         }, velocity);
-        intervals.push(iv);
+        intervals.push(letterCycle);
       }, i * delay);
-      timeouts.push(to);
+      timeouts.push(nextIndex);
     }
 
     return () => {
@@ -52,7 +54,6 @@ function App() {
     };
   }, []); // executa só no load
 
-  // mantém o teu split para normal/bold
   const normal = title.slice(0, 8);
   const bold = title.slice(8);
 
@@ -74,7 +75,19 @@ function App() {
               >
                 Portfolio
               </button>
-              <button className="btn">Contact Me</button>
+              <button
+                className="btn"
+                onClick={async () => {
+                  try {
+                    await navigator.clipboard.writeText("samaro.dev@gmail.com");
+                    alert("Email copied! Now paste it into your mail app.");
+                  } catch {
+                    window.location.href = "mailto:samaro.dev@gmail.com";
+                  }
+                }}
+              >
+                Contact Me
+              </button>
               <div />
             </div>
             <Footer today={today} />
@@ -85,7 +98,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <div className="other-page">
+        <div className="portfolio-page">
           <h2>🚀 Welcome to the other page!</h2>
           <p>This is completely separate from the intro.</p>
           <button onClick={() => setShowPortfolio(false)}>⬅ Back</button>
