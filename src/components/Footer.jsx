@@ -1,11 +1,13 @@
 import React from "react";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import "./Footer.css";
 
-function Footer() {
+function Footer(props) {
   return (
     <footer className="footer">
+      <p className="footnote">Professional web developer © {props.today} </p>
       <a
-        href="https://github.com/your-username"
+        href="https://github.com/samarog"
         target="_blank"
         rel="noopener noreferrer"
         className="social-btn"
@@ -13,7 +15,7 @@ function Footer() {
         <Github size={20} />
       </a>
       <a
-        href="https://linkedin.com/in/your-username"
+        href="https://www.linkedin.com/in/gonsamaro/"
         target="_blank"
         rel="noopener noreferrer"
         className="social-btn"
@@ -21,7 +23,7 @@ function Footer() {
         <Linkedin size={20} />
       </a>
       <a
-        href="https://twitter.com/your-username"
+        href="https://x.com/gonsamaro"
         target="_blank"
         rel="noopener noreferrer"
         className="social-btn"
