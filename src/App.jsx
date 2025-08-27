@@ -1,35 +1,71 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import Footer from "./Footer";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [title, setTitle] = useState("");
+  const [finished, setFinished] = useState(false);
+  const [showPortfolio, setShowPortfolio] = useState(false);
+  const fullTitle = "Gonçalo Amaro";
+  const today = new Date().getFullYear();
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setTitle(fullTitle.slice(0, i + 1));
+      i++;
+      if (i === fullTitle.length) {
+        clearInterval(interval);
+        setFinished(true);
+      }
+    }, 150);
+    return () => clearInterval(interval);
+  }, []);
+
+  const normal = title.slice(0, 8);
+  const bold = title.slice(8);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {!showPortfolio ? (
+        /* ---- Page 1: Intro page ---*/
+        <div className="intro-page">
+          <h1>
+            {normal}
+            <strong>{bold}</strong>
+            {finished && <span className="cursor"></span>}
+          </h1>
+
+          <div className={`intro ${finished ? "reveal" : ""}`}>
+            <div className="card">
+              <button
+                className="btn primary"
+                onClick={() => setShowPortfolio(true)}
+              >
+                Portfolio
+              </button>
+              <button className="btn">Secondary</button>
+              <button className="btn">Secondary</button>
+              <div></div>
+            </div>
+            <p>Professional web developer © {today} </p>
+            <Footer />
+            <span
+              className={`pulsar ${finished ? "on" : ""}`}
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+      ) : (
+        /* ---------- Page 2: CV ---------- */
+        <div className="other-page">
+          <h2>🚀 Welcome to the other page!</h2>
+          <p>This is completely separate from the intro.</p>
+          <button onClick={() => setShowPortfolio(false)}>⬅ Back</button>
+        </div>
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
