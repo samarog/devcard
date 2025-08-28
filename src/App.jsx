@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import Footer from "./components/Footer.jsx";
 import { Toaster, toast } from "sonner";
 import Game from "./components/Game.jsx";
+import Portfolio from "./components/Portfolio.jsx";
 import "./App.css";
 
 function App() {
   const [title, setTitle] = useState("");
   const [finished, setFinished] = useState(false);
   const [showResume, setShowResume] = useState(false);
+  const [showPortfolio, setShowPortfolio] = useState(false);
 
   const fullTitle = "Gonçalo Amaro";
   const today = new Date().getFullYear();
@@ -63,7 +65,7 @@ function App() {
     <>
       <Toaster position="bottom-right" richColors closeButton />
 
-      {!showResume ? (
+      {!showResume && !showPortfolio ? (
         <div className="intro-page">
           <h1 className="matrix">
             {normal}
@@ -73,10 +75,15 @@ function App() {
 
           <div className={`intro ${finished ? "reveal" : ""}`}>
             <div className="card">
-              <button className="btn primary">Portfolio</button>
+              <button
+                className="btn primary"
+                onClick={() => setShowPortfolio(true)}
+              >
+                Portfolio
+              </button>
 
               <button className="btn" onClick={() => setShowResume(true)}>
-                Résumé
+                Percurso
               </button>
 
               <button
@@ -109,6 +116,8 @@ function App() {
             />
           </div>
         </div>
+      ) : !showResume && showPortfolio ? (
+        <Portfolio />
       ) : (
         <Game onBack={() => setShowResume(false)} />
       )}

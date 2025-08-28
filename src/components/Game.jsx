@@ -6,7 +6,7 @@ const chapters = {
   start: {
     id: "start",
     title: "Press Start",
-    text: "Olá, chamo-me Gonçalo Amaro e sou programador. Conheça um pouco da minha viagem até aqui.",
+    text: "Olá, chamo meu nome é Gonçalo Amaro e sou programador recém-qualificado. Conheça um pouco da minha viagem até hoje.",
     choices: [{ label: "Começar", next: "perfil" }],
   },
   perfil: {
@@ -102,13 +102,13 @@ const chapters = {
 
 export default function Game(props) {
   const [id, setId] = useState("start");
-  const [phase, setPhase] = useState("enter"); // 'enter' | 'exit'
-  const [pending, setPending] = useState(null); // next scene id after exit
+  const [phase, setPhase] = useState("enter");
+  const [pending, setPending] = useState(null);
 
   const scene = chapters[id] ?? chapters.start;
 
   function go(next) {
-    if (phase === "exit") return; // avoid double-click during exit
+    if (phase === "exit") return;
     setPending(next);
     setPhase("exit");
   }
@@ -145,7 +145,7 @@ export default function Game(props) {
         {scene.ending && (
           <div>
             <button className="btn ghost" onClick={props.onBack}>
-              ❮❮ Homepage
+              𐰁 Início
             </button>
 
             <button
@@ -166,6 +166,15 @@ export default function Game(props) {
               }}
             >
               ✉ Contacte-me
+            </button>
+            <button className="btn-cv">
+              <a
+                href="https://resume.io/r/26b7ZxqFw"
+                download="GoncaloAmaro-CV"
+                target="_blank"
+              >
+                Résumé
+              </a>
             </button>
 
             <footer className="game-simple__footer">

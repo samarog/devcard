@@ -49,6 +49,7 @@
   padding: 0.55rem 0.9rem;
   border-radius: 10px;
   cursor: pointer;
+  margin-bottom: 2%;
 
   border: 1px solid #d8dcff;
   background: #f7f8ff;
@@ -56,6 +57,27 @@
 
   transition: transform 0.18s ease, box-shadow 0.25s ease,
     background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-cv {
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 2%;
+  margin-left: 0.6rem;
+
+  border: 1px solid #d8dcff;
+  background: #f7f8ff;
+  color: #1a1a1a;
+
+  transition: transform 0.18s ease, box-shadow 0.25s ease,
+    background-color 0.55s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-cv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  border-color: #8d63ee9d;
 }
 
 .btn:hover {
