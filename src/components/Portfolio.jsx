@@ -60,7 +60,7 @@ function Portfolio() {
       <h1>
         {firstPart} <strong>{secondPart}</strong>
       </h1>
-      <div className={`intro ${finished ? "reveal" : ""}`}></div>
+      <div className={`intro ${finished ? "reveal" : ""}`}>Hello</div>
     </div>
   );
 }
