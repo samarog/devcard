@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import Footer from "./components/Footer.jsx";
+import { Toaster, toast } from "sonner";
 import Game from "./components/Game.jsx";
 import "./App.css";
 
 function App() {
   const [title, setTitle] = useState("");
   const [finished, setFinished] = useState(false);
-  const [showPortfolio, setShowPortfolio] = useState(false);
+  const [showResume, setShowResume] = useState(false);
 
   const fullTitle = "Gonçalo Amaro";
   const today = new Date().getFullYear();
@@ -60,7 +61,9 @@ function App() {
 
   return (
     <>
-      {!showPortfolio ? (
+      <Toaster position="bottom-right" richColors closeButton />
+
+      {!showResume ? (
         <div className="intro-page">
           <h1 className="matrix">
             {normal}
@@ -70,28 +73,35 @@ function App() {
 
           <div className={`intro ${finished ? "reveal" : ""}`}>
             <div className="card">
-              <button
-                className="btn primary"
-                onClick={() => setShowPortfolio(true)}
-              >
-                Portfolio
+              <button className="btn primary">Portfolio</button>
+
+              <button className="btn" onClick={() => setShowResume(true)}>
+                Résumé
               </button>
-              <button className="btn">Résumé</button>
+
               <button
                 className="btn"
                 onClick={async () => {
                   try {
-                    await navigator.clipboard.writeText("samaro.dev@gmail.com");
-                    alert("Email copied! Now paste it into your mail app.");
+                    await navigator.clipboard.writeText(
+                      "amaro.saraiva@gmail.com"
+                    );
+                    toast.success("Email copiado.", {
+                      description:
+                        "Cole o meu email no seu provedor de email e escreva-me.",
+                    });
                   } catch {
-                    window.location.href = "mailto:samaro.dev@gmail.com";
+                    toast.info("A abrir o seu cliente de email…");
+                    window.location.href = "mailto:amaro.saraiva@gmail.com";
                   }
                 }}
               >
-                Contact Me
+                Contacte-me
               </button>
+
               <div />
             </div>
+
             <Footer today={today} />
             <span
               className={`pulsar ${finished ? "on" : ""}`}
@@ -100,7 +110,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <Game />
+        <Game onBack={() => setShowResume(false)} />
       )}
     </>
   );
