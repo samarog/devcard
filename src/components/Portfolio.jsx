@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Card from "./Card";
 
 function Portfolio() {
   const [animation, setAnimation] = useState("");
@@ -10,7 +11,22 @@ function Portfolio() {
   useEffect(() => {
     const text = fullTitle;
     const pool = "0123456789abcdefghijklmnopqrtsuvwxzy";
-    const arr = Array.from(text, (e) => (e = "")); // cria uma array vazia do tamanho do meu nome para manipular cada substr
+    const symb = [
+      "○",
+      "●",
+      "◇",
+      "◆",
+      "□",
+      "■",
+      "△",
+      "▲",
+      "▽",
+      "▼",
+      "☠",
+      "✦",
+      "✧",
+    ];
+    let arr = Array.from(text, (e) => (e = "")); // cria uma array vazia do tamanho do meu nome para manipular cada substr
 
     // CONTROLOS DO EFEITO
     const cycle = 8; // numero de ciclo de caracteres para o shuffle
@@ -38,7 +54,18 @@ function Portfolio() {
             setAnimation(arr.join(""));
             clearInterval(letterCycle);
             if (i === text.length - 1) {
-              setFinished(true);
+              const blinkInterval = setInterval(() => {
+                arr[[Math.floor(Math.random() * arr.length)]] =
+                  symb[[Math.floor(Math.random() * symb.length)]]; // toggle skull and blank
+                setAnimation(arr.join(""));
+              }, 100); // blink speed
+              intervals.push(blinkInterval);
+              setTimeout(() => {
+                clearInterval(blinkInterval);
+                arr = [...text];
+                setAnimation(arr.join(""));
+                setFinished(true);
+              }, 1000);
             }
           }
         }, velocity);
@@ -60,7 +87,56 @@ function Portfolio() {
       <h1>
         {firstPart} <strong>{secondPart}</strong>
       </h1>
-      <div className={`intro ${finished ? "reveal" : ""}`}>Hello</div>
+      <div className={`intro ${finished ? "reveal" : ""}`}>
+        <h2>Full-stack</h2>
+        <Card
+          title="Escriba"
+          img="./src/assets/escriba.png"
+          linkgit="https://github.com/samarog/escriba"
+          linksite="https://escriba.onrender.com/"
+          description={
+            <>
+              Escrito em <strong>Express.js</strong>, o Escriba é uma web app
+              que conjuga um microblog com um personal tracker. Inclui
+              autenticação local, passwords encriptadas, sessões persistentes,
+              condensadas numa base de dados em PostgreSQL. Toda a interface
+              apresenta um estilo minimalista em tons escuros, com suporte na
+              APIs de imagens Lorem Picsum. O Escriba é totalmente responsivo e
+              segue o layout clássico de dashboard.
+            </>
+          }
+        />
+        <Card
+          title="Codfish"
+          img="./src/assets/codfish.png"
+          description={
+            <>
+              O Codfish nasce como uma ferramenta de análise de texto para
+              otimização SEO em português, com o intuito de oferecer métricas de
+              posicionamento em motores de busca, úteis para escritores,
+              jornalistas e profissionais de marketing de conteúdo. Com um
+              protótipo escrito em vanilla <strong>JavaScript</strong>, mais
+              tarde o projeto foi inteiramente convertido para{" "}
+              <strong>React.js</strong>.
+            </>
+          }
+        />
+        <Card
+          title="Escriba"
+          img="./src/assets/escriba.PNG"
+          description={
+            <>
+              Escrito em <strong>Express.js</strong>, o Escriba é uma web app
+              que conjuga um microblog com um personal tracker. Inclui
+              autenticação local, passwords encriptadas, sessões persistentes,
+              condensadas numa base de dados em PostgreSQL. Toda a interface
+              apresenta um estilo minimalista em tons escuros, com suporte na
+              APIs de imagens Lorem Picsum. O Escriba é totalmente responsivo e
+              segue o layout clássico de dashboard.
+            </>
+          }
+        />
+      </div>
     </div>
   );
 }
