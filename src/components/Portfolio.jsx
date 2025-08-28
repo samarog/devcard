@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function Portfolio() {
   const [animation, setAnimation] = useState("");
   const [finished, setFinished] = useState(false);
-  const fullTitle = "Este é o meu trabalho:";
+  const fullTitle = "Um pouco do meu trabalho:";
 
   // a animação pesadelo
 
@@ -13,9 +13,9 @@ function Portfolio() {
     const arr = Array.from(text, (e) => (e = "")); // cria uma array vazia do tamanho do meu nome para manipular cada substr
 
     // CONTROLOS DO EFEITO
-    const cycle = 10; // numero de ciclo de caracteres para o shuffle
-    const delay = 200; // atraso entre letras
-    const velocity = 70; // velocidade do shuffle
+    const cycle = 8; // numero de ciclo de caracteres para o shuffle
+    const delay = 100; // atraso entre letras
+    const velocity = 100; // velocidade do shuffle
 
     setAnimation(arr.join("")); // para começar a animação, tenho de partir de uma empty string, por isso arr.join("") »»» junta numa string todos os elementos de uma array. "" para ser sem espaços. por exemplo: const elements = ["Fire", "Air", "Water"] » elements.join() » expected output: "Fire,Air,Water"
 
@@ -52,9 +52,15 @@ function Portfolio() {
     };
   }, []); // executa só no load
 
+  const firstPart = animation.slice(0, 11);
+  const secondPart = animation.slice(11, animation.length);
+
   return (
     <div>
-      <h1>{animation}</h1>
+      <h1>
+        {firstPart} <strong>{secondPart}</strong>
+      </h1>
+      <div className={`intro ${finished ? "reveal" : ""}`}></div>
     </div>
   );
 }
