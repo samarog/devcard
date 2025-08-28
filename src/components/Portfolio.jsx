@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Portfolio() {
   const [animation, setAnimation] = useState("");
-  const [finished, setFinished] = useState("");
-  const fullTitle = "Hello, this is my work:";
+  const [finished, setFinished] = useState(false);
+  const fullTitle = "Este é o meu trabalho:";
 
-  // gaaaah, a animação pesadelo
+  // a animação pesadelo
 
   useEffect(() => {
     const text = fullTitle;
@@ -17,23 +17,25 @@ function Portfolio() {
     const delay = 200; // atraso entre letras
     const velocity = 70; // velocidade do shuffle
 
-    setAnimation(arr.join("")); // junta numa string todos os elementos de uma array. "" para ser sem espaços. por exemplo: const elements = ["Fire", "Air", "Water"] » elements.join() » expected output: "Fire,Air,Water"
+    setAnimation(arr.join("")); // para começar a animação, tenho de partir de uma empty string, por isso arr.join("") »»» junta numa string todos os elementos de uma array. "" para ser sem espaços. por exemplo: const elements = ["Fire", "Air", "Water"] » elements.join() » expected output: "Fire,Air,Water"
 
-    const timeouts = [];
-    const intervals = [];
+    const timeouts = []; // isto é para limpar os IDs da memória
+    const intervals = []; // same as above
+
+    // aqui é que a porca torce o rabo
 
     for (let i = 0; i < text.length; i++) {
+      // variavel de iteração com for loop normal
       const nextIndex = setTimeout(() => {
         let ticks = 0;
         const letterCycle = setInterval(() => {
           if (ticks < cycle) {
             arr[i] = pool[Math.floor(Math.random() * pool.length)];
-            setTitle(arr.join(""));
-            console.log(arr);
-            ticks++;
+            setAnimation(arr.join("")); // isto vai colocar uma letra random no index em loop e o numero de ciclos faz repetir isto x vezes.
+            ticks++; // e volta para cima até se cumprir a condição
           } else {
-            arr[i] = text[i]; // substitui uma última vez agora em text, assim garanto sempre que fica certo
-            setTitle(arr.join(""));
+            arr[i] = text[i]; // fixa a letra certa
+            setAnimation(arr.join(""));
             clearInterval(letterCycle);
             if (i === text.length - 1) {
               setFinished(true);
@@ -41,10 +43,9 @@ function Portfolio() {
           }
         }, velocity);
         intervals.push(letterCycle);
-      }, i * delay);
+      }, delay);
       timeouts.push(nextIndex);
     }
-
     return () => {
       timeouts.forEach(clearTimeout);
       intervals.forEach(clearInterval);
@@ -53,7 +54,7 @@ function Portfolio() {
 
   return (
     <div>
-      <h1>Hello</h1>
+      <h1>{animation}</h1>
     </div>
   );
 }
