@@ -1,0 +1,159 @@
+/* Container principal do jogo */
+.game-simple {
+  max-width: 620px;
+  margin: 24px auto;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  /* cartão */
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.game-simple__header {
+  margin-bottom: 8px;
+}
+.game-simple__header h3 {
+  margin: 10px;
+  font-weight: 500;
+}
+
+/* Texto da cena */
+.game-simple__text {
+  margin: 0 0 10px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Zona das escolhas (botões) */
+.game-simple__choices {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 22px;
+}
+
+/* Rodapé (aparece no final) */
+.game-simple__footer {
+  margin-top: 12px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Botão base (reutiliza a tua classe .btn) */
+.btn {
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 2%;
+
+  border: 1px solid #d8dcff;
+  background: #f7f8ff;
+  color: #1a1a1a;
+
+  transition: transform 0.18s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-cv {
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 2%;
+  margin-left: 0.6rem;
+
+  border: 1px solid #d8dcff;
+  background: #f7f8ff;
+  color: #1a1a1a;
+
+  transition: transform 0.18s ease, box-shadow 0.25s ease,
+    background-color 0.55s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-cv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  border-color: #8d63ee9d;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  border-color: #eaebff;
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.game-simple__topbar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #e5e5e5;
+}
+
+/* Card wrapper that animates in/out */
+.scene-card {
+  will-change: transform, opacity, filter;
+}
+
+/* Enter: fade + slight lift */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+    filter: blur(1px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Exit: fade + slight drop */
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(7px) scale(0.98);
+    filter: blur(1.1px);
+  }
+}
+
+.scene-card.anim-in {
+  animation: fadeInUp 800ms ease both;
+}
+
+.scene-card.anim-out {
+  animation: fadeOutDown 200ms ease both;
+}
+
+/* Optional: space the ending block nicely */
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scene-card.anim-in,
+  .scene-card.anim-out {
+    animation: none;
+  }
+}
+
+/* Acessibilidade: reduzir motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
