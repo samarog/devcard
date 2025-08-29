@@ -6,7 +6,7 @@ function Portfolio(props) {
   const [finished, setFinished] = useState(false);
   const fullTitle = "Projetos e protótipos";
 
-  // a animação pesadelo
+  // anim
 
   useEffect(() => {
     const text = fullTitle;
@@ -81,10 +81,12 @@ function Portfolio(props) {
           <div className="fullstack">
             <h2>Full-stack</h2>
             <Card
+              className="escriba"
               title="Escriba"
               img="./src/assets/escriba.png"
+              link="https://escriba.onrender.com/"
               linkgit="https://github.com/samarog/escriba"
-              linksite="https://escriba.onrender.com/"
+              linkreadme="https://github.com/samarog/escriba#readme"
               description={
                 <>
                   Escrito em <strong>Express.js</strong>, o Escriba é uma web
@@ -99,10 +101,12 @@ function Portfolio(props) {
               }
             />
             <Card
+              className="codfish"
               title="Codfish"
               img="./src/assets/codfish.png"
               linkgit="https://github.com/samarog/codfish"
-              linksite="https://samarog.github.io/codfish/19.3.3%20Codfish%20Kiwi/index.html"
+              link="https://samarog.github.io/codfish/19.3.3%20Codfish%20Kiwi/index.html"
+              linkreadme="https://github.com/samarog/codfish#readme"
               description={
                 <>
                   O Codfish nasce como uma ferramenta de análise de texto para
@@ -119,10 +123,12 @@ function Portfolio(props) {
           <div className="backend">
             <h2>Backend</h2>
             <Card
+              className="iguaria"
               title="Iguaria API"
               img="./src/assets/iguaria.png"
               linkgit="https://github.com/samarog/iguaria-api/"
-              linksite="https://samarog.github.io/iguaria-api/"
+              link="https://samarog.github.io/iguaria-api/"
+              linkreadme="https://github.com/samarog/iguaria-api#readme"
               description={
                 <>
                   Uma API REST gratuita para explorar e obter receitas,
@@ -134,10 +140,12 @@ function Portfolio(props) {
               }
             />
             <Card
+              className="mapl"
               title="Mapl"
               img="./src/assets/mapl.png"
               linkgit="https://github.com/samarog/projects.git"
-              linksite="https://projects-zo3k.onrender.com/"
+              link="https://projects-zo3k.onrender.com/"
+              linkreadme="https://github.com/samarog/projects/blob/main/33.7%20Mapl/README.md"
               description={
                 <>
                   O Mapl é uma aplicação fullstack minimalista em Node.js que
@@ -155,28 +163,32 @@ function Portfolio(props) {
           <div className="frontend">
             <h2>Frontend</h2>
             <Card
+              className="doompc"
               title="dooMPC"
               img="./src/assets/doompc.png"
               linkgit="https://github.com/samarog/projects.git"
-              linksite="https://samarog.github.io/projects/18.1%20MPC%20Sim/index.html"
+              link="https://samarog.github.io/projects/18.1%20MPC%20Sim/index.html"
+              linkreadme="https://github.com/samarog/projects/blob/main/18.1%20MPC%20Sim/README.md"
               description={
                 <>
-                  O dooMPC é um simulador de soundboard que apresenta uma
-                  interface simples em HTML e vanilla CSS com uma grelha 4x4 de
-                  pads, cada um associado a um sample de áudio, permitindo ao
-                  utilizador disparar sons instantaneamente com cliques ou
-                  teclas do teclado. Feedback visual rápido, reprodução de áudio
-                  em .wav ou .mp3 sem atraso e lógica em{" "}
+                  O dooMPC é um simulador da mítica soundboard AKAI MPC.
+                  Apresenta uma interface simples em HTML e vanilla CSS com uma
+                  grelha 4x4 de pads, cada um associado a um sample de áudio,
+                  permitindo ao utilizador disparar sons instantaneamente com
+                  cliques ou teclas do teclado. Feedback visual rápido,
+                  reprodução de áudio em .wav ou .mp3 sem atraso e lógica em{" "}
                   <strong> JavaScript </strong>puro para garantir interatividade
                   fluida sem necessidade de bibliotecas externas.
                 </>
               }
             />
             <Card
+              className="pokeget"
               title="PokeGET"
               img="./src/assets/pokeget.png"
               linkgit="https://github.com/samarog/projects.git"
-              linksite="https://samarog.github.io/projects/29.1%20PokeGET/app-v2.html"
+              linkr="https://samarog.github.io/projects/29.1%20PokeGET/app-v2.html"
+              linkreadme="https://github.com/samarog/projects/blob/main/29.1%20PokeGET/README.md"
               description={
                 <>
                   O PokeGET é uma aplicação web retro que permite procurar e
@@ -194,15 +206,23 @@ function Portfolio(props) {
               }
             />
             <Card
-              title="Gramasgel"
-              img="./src/assets/gramasgel.png"
+              className="csvix"
+              title="CSV.IX"
+              img="./src/assets/csvix.png"
               linkgit="https://github.com/samarog/projects.git"
-              linksite="https://samarog.github.io/projects/99.1%20Gramasgel/index.html"
+              link="https://samarog.github.io/projects/29.5%20CSV.IX/app.html"
+              linkreadme="https://github.com/samarog/projects/blob/main/29.5%20CSV.IX/README.md"
               description={
                 <>
-                  Protótipo de frontend clássico de website de empresa desenhado
-                  para o cliente final. Escrito em HTML com biblioteca{" "}
-                  <strong>Bootstrap</strong>.
+                  O CSV.ix é um leitor de dados experimental escrito em{" "}
+                  <strong>JavaScript</strong> com biblioteca{" "}
+                  <strong>Chart.js</strong> e lógica de exportação, que permite
+                  ao utilizador carregar, gerar e guardar representações
+                  gráficas de ficheiros CSV. Foca-se apenas nas funcionalidades
+                  essenciais para validar o processo de leitura, transformação e
+                  exportação de informação, com uma interface moderna e
+                  responsiva. A aplicação suporta apenas CSVs com duas colunas
+                  (etiquetas e integrais).
                 </>
               }
             />
@@ -210,10 +230,12 @@ function Portfolio(props) {
           <div className="ai">
             <h2>IA Conversacional</h2>
             <Card
+              className="agent"
               title="Agentes de conversação"
               img="./src/assets/agent.png"
               linkgit="https://github.com/samarog/agents"
-              linksite="https://centralmed.pt/"
+              link="https://centralmed.pt/"
+              linkreadme="https://github.com/samarog/agents#readme"
               description={
                 <>
                   A minha primeira experiência em IA generativa envolveu todo o
@@ -222,11 +244,11 @@ function Portfolio(props) {
                   mapeamento e tratamento da informação, até ao design de
                   prompts e processos de fine-tuning. Os agentes foram
                   construídos em plataformas pré-estruturadas como a{" "}
-                  <strong>Chatbase e a Botpress</strong>, com o styling
-                  manipulado no lado do cliente. Atualmente, estou a expandir
-                  estas soluções através da implementação de lógica server-side,
-                  com o objetivo de aumentar a flexibilidade e a capacidade
-                  destes produtos.
+                  <strong>Chatbase/Botpress</strong>, com o styling manipulado
+                  no lado do cliente. Atualmente, estou a expandir estas
+                  soluções através da implementação de lógica server-side, com o
+                  objetivo de aumentar a flexibilidade e a capacidade destes
+                  produtos.
                 </>
               }
             />

@@ -1,13 +1,17 @@
 import React from "react";
 import "./Card.css";
-import { Github, FileCode2 } from "lucide-react";
+import { FolderGit2, FileCode2 } from "lucide-react";
 
 function Card(props) {
   return (
-    <div className="hero">
+    <div className={`hero ${props.className || ""}`}>
       <h3>{props.title}</h3>
-      <a href={props.img} target="_blank" rel="noopener noreferrer">
-        <img src={props.img} alt={props.title} />
+      <a href={props.link} target="_blank" rel="noopener noreferrer">
+        <img
+          src={props.img}
+          title="Clique para abrir o projeto"
+          alt={props.title}
+        />
       </a>
       <p>{props.description}</p>
       <div className="links">
@@ -16,14 +20,16 @@ function Card(props) {
           target="_blank"
           rel="noopener noreferrer"
           className="social-btn"
+          title="Consulte o repositório Git"
         >
-          <Github size={20} />
+          <FolderGit2 size={20} />
         </a>
         <a
-          href={props.linksite}
+          href={props.linkreadme}
           target="_blank"
           rel="noopener noreferrer"
           className="social-btn"
+          title="Leia o README.md"
         >
           <FileCode2 size={20} />
         </a>
