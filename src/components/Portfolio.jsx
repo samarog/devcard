@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
+import escribaImg from "@/assets/escriba.png";
+import codfishImg from "@/assets/codfish.png";
+import iguariaImg from "@/assets/iguaria.png";
+import maplImg from "@/assets/mapl.png";
+import doompcImg from "@/assets/doompc.png";
+import pokegetImg from "@/assets/pokeget.png";
+import csvixImg from "@/assets/csvix.png";
+import agentImg from "@/assets/agent.png";
 
 function Portfolio(props) {
   const [animation, setAnimation] = useState("");
@@ -83,7 +91,7 @@ function Portfolio(props) {
             <Card
               className="escriba"
               title="Escriba"
-              img="./src/assets/escriba.png"
+              img={escribaImg}
               link="https://escriba.onrender.com/"
               linkgit="https://github.com/samarog/escriba"
               linkreadme="https://github.com/samarog/escriba#readme"
@@ -103,7 +111,7 @@ function Portfolio(props) {
             <Card
               className="codfish"
               title="Codfish"
-              img="./src/assets/codfish.png"
+              img={codfishImg}
               linkgit="https://github.com/samarog/codfish"
               link="https://samarog.github.io/codfish/19.3.3%20Codfish%20Kiwi/index.html"
               linkreadme="https://github.com/samarog/codfish#readme"
@@ -125,7 +133,7 @@ function Portfolio(props) {
             <Card
               className="iguaria"
               title="Iguaria API"
-              img="./src/assets/iguaria.png"
+              img={iguariaImg}
               linkgit="https://github.com/samarog/iguaria-api/"
               link="https://samarog.github.io/iguaria-api/"
               linkreadme="https://github.com/samarog/iguaria-api#readme"
@@ -142,7 +150,7 @@ function Portfolio(props) {
             <Card
               className="mapl"
               title="Mapl"
-              img="./src/assets/mapl.png"
+              img={maplImg}
               linkgit="https://github.com/samarog/projects.git"
               link="https://projects-zo3k.onrender.com/"
               linkreadme="https://github.com/samarog/projects/blob/main/33.7%20Mapl/README.md"
@@ -165,7 +173,7 @@ function Portfolio(props) {
             <Card
               className="doompc"
               title="dooMPC"
-              img="./src/assets/doompc.png"
+              img={doompcImg}
               linkgit="https://github.com/samarog/projects.git"
               link="https://samarog.github.io/projects/18.1%20MPC%20Sim/index.html"
               linkreadme="https://github.com/samarog/projects/blob/main/18.1%20MPC%20Sim/README.md"
@@ -185,7 +193,7 @@ function Portfolio(props) {
             <Card
               className="pokeget"
               title="PokeGET"
-              img="./src/assets/pokeget.png"
+              img={pokegetImg}
               linkgit="https://github.com/samarog/projects.git"
               linkr="https://samarog.github.io/projects/29.1%20PokeGET/app-v2.html"
               linkreadme="https://github.com/samarog/projects/blob/main/29.1%20PokeGET/README.md"
@@ -208,7 +216,7 @@ function Portfolio(props) {
             <Card
               className="csvix"
               title="CSV.IX"
-              img="./src/assets/csvix.png"
+              img={csvixImg}
               linkgit="https://github.com/samarog/projects.git"
               link="https://samarog.github.io/projects/29.5%20CSV.IX/app.html"
               linkreadme="https://github.com/samarog/projects/blob/main/29.5%20CSV.IX/README.md"
@@ -232,7 +240,7 @@ function Portfolio(props) {
             <Card
               className="agent"
               title="Agentes de conversação"
-              img="./src/assets/agent.png"
+              img={agentImg}
               linkgit="https://github.com/samarog/agents"
               link="https://centralmed.pt/"
               linkreadme="https://github.com/samarog/agents#readme"
