@@ -117,7 +117,7 @@ function App() {
           </div>
         </div>
       ) : !showResume && showPortfolio ? (
-        <Portfolio />
+        <Portfolio onBack={() => setShowPortfolio(false)} />
       ) : (
         <Game onBack={() => setShowResume(false)} />
       )}

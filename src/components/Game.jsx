@@ -145,7 +145,7 @@ export default function Game(props) {
         {scene.ending && (
           <div>
             <button className="btn ghost" onClick={props.onBack}>
-              𐰁 Início
+              Início
             </button>
 
             <button
@@ -165,7 +165,7 @@ export default function Game(props) {
                 }
               }}
             >
-              ✉ Contacte-me
+              Contacte-me
             </button>
             <button className="btn-cv">
               <a

@@ -5,12 +5,43 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* pattern background */
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  position: relative;
+  z-index: 0; /* so overlay can sit on top */
+}
+
+:root::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* covers the whole element */
+  background: url("https://www.transparenttextures.com/patterns/gplay.png");
+  z-index: -1; /* send behind content */
+  animation: pulseBrightness 40s ease-in-out infinite;
+}
+
+/* animate brightness or opacity */
+@keyframes pulseBrightness {
+  0%,
+  100% {
+    filter: brightness(0.9);
+    opacity: 0.44;
+  }
+  50% {
+    filter: brightness(3.3);
+    opacity: 0.2;
+  }
+}
+
+/* keyframes for animation */
+@keyframes moveBg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 500px; /* moves horizontally */
+  }
 }
 
 a {

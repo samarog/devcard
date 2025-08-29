@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
 
-function Portfolio() {
+function Portfolio(props) {
   const [animation, setAnimation] = useState("");
   const [finished, setFinished] = useState(false);
   const fullTitle = "Projetos e protótipos";
@@ -238,6 +238,9 @@ function Portfolio() {
               github.com/samarog
             </a>
           </p>
+          <button className="btn" onClick={props.onBack}>
+            Voltar
+          </button>
         </div>
       </div>
     </div>
