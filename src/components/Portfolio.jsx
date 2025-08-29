@@ -200,7 +200,7 @@ function Portfolio(props) {
                   estilo inspirado no Game Boy e nas cartas TCG. Escrito em{" "}
                   <strong>HTML, CSS e JavaScript</strong>, a app garante
                   interatividade direta, design responsivo, background dinâmico
-                  e até "cry" do do Pokémon, oferecendo valor prático e
+                  e até 'cry' do Pokémon, oferecendo valor prático e
                   divertido sem necessidade de setup ou dependências externas.
                 </>
               }
