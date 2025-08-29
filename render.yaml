@@ -1,7 +1,10 @@
 services:
   - type: static
-    name: my-react-site
-    buildCommand: pnpm i --frozen-lockfile && pnpm build
+    name: devcard
+    rootDir: .
+    buildCommand: >
+      bash -lc 'pwd; ls -la; corepack enable; node -v; pnpm -v;
+      pnpm install --frozen-lockfile; pnpm run build'
     publishPath: dist
     routes:
       - type: rewrite
