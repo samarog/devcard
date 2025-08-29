@@ -1,12 +1,10 @@
 services:
   - type: static
     name: devcard
-    rootDir: .
-    buildCommand: >
-      bash -lc 'pwd; ls -la; corepack enable; node -v; pnpm -v;
-      pnpm install --frozen-lockfile; pnpm run build'
-    publishPath: dist
-    routes:
-      - type: rewrite
-        source: "/*"
-        destination: "/index.html"
+    buildCommand: |
+      corepack enable
+      corepack prepare pnpm@8 --activate
+      pnpm -v
+      pnpm install --frozen-lockfile
+      pnpm run build
+    staticPublishPath: dist
