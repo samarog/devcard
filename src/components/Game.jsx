@@ -14,8 +14,8 @@ const chapters = {
     title: "Perfil",
     text: "Após 10 anos de experiência em jornalismo económico, tomei a decisão de abraçar um novo desafio, e fiz a reconversão profissional para uma área que, de certa forma, sempre me acompanhou: a escrita. Agora numa linguagem diferente.",
     choices: [
-      { label: "O jornalista", next: "jornalista" },
-      { label: "O programador", next: "primeiro_codigo" },
+      { label: "O jornalismo", next: "jornalista" },
+      { label: "A programação", next: "primeiro_codigo" },
     ],
   },
   jornalista: {
