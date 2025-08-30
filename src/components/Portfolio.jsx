@@ -102,9 +102,9 @@ function Portfolio(props) {
                   autenticação local, passwords encriptadas, sessões
                   persistentes, condensadas numa base de dados em PostgreSQL.
                   Toda a interface apresenta um estilo minimalista em tons
-                  escuros, com suporte na APIs de imagens Lorem Picsum. O
-                  Escriba é totalmente responsivo e segue o layout clássico de
-                  dashboard.
+                  escuros, suportada pela API de imagens Lorem Picsum. O
+                  Escriba é totalmente responsivo e segue um layout de
+                  dashboard clássico.
                 </>
               }
             />
@@ -117,10 +117,10 @@ function Portfolio(props) {
               linkreadme="https://github.com/samarog/codfish#readme"
               description={
                 <>
-                  O Codfish nasce como uma ferramenta de análise de texto para
-                  otimização SEO em português, com o intuito de oferecer
-                  métricas de posicionamento em motores de busca, úteis para
-                  escritores, jornalistas e profissionais de marketing de
+                  O Codfish nasce da necessidade de criar uma ferramenta de
+                  otimização de SEO para conteúdos em português. O objetivo é oferecer
+                  insights quantitativos e qualitativos para melhorar as métricas de posicionamento
+                  dos motores de busca. Útil para escritores, jornalistas e profissionais de marketing de
                   conteúdo. Com um protótipo escrito em vanilla{" "}
                   <strong>JavaScript</strong>, mais tarde o projeto foi
                   inteiramente convertido para <strong>React.js</strong>.
@@ -139,9 +139,9 @@ function Portfolio(props) {
               linkreadme="https://github.com/samarog/iguaria-api#readme"
               description={
                 <>
-                  Uma API REST gratuita para explorar e obter receitas,
+                  Uma API REST gratuita que permite explorar e obter receitas,
                   construída em <strong>Node.js e Express</strong>, com Helmet e
-                  CORS ativados. Permite procura parametrizada por query e id.
+                  CORS ativados. Aceita procura parametrizada por query e id.
                   Com documentação detalhada e endpoints devidamente testados e
                   funcionais.
                 </>
@@ -199,16 +199,16 @@ function Portfolio(props) {
               linkreadme="https://github.com/samarog/projects/blob/main/29.1%20PokeGET/README.md"
               description={
                 <>
-                  O PokeGET é uma aplicação web retro que permite procurar e
+                  O PokeGET é uma aplicação web que permite procurar e
                   visualizar informações sobre Pokémons a partir da PokéAPI,
                   correspondendo a uma experiência simples mas funcional: o
                   utilizador pesquisa um Pokémon por nome ou tipo e a resposta
                   gera automaticamente um “card” com a sprite oficial, e alguns
                   dados básicos, habilidades e movimentos, tudo apresentado em
-                  estilo inspirado no Game Boy e nas cartas TCG. Escrito em{" "}
+                  estilo retro inspirado no Game Boy e nas cartas TCG. Escrito em{" "}
                   <strong>HTML, CSS e JavaScript</strong>, a app garante
                   interatividade direta, design responsivo, background dinâmico
-                  e até 'cry' do Pokémon, oferecendo valor prático e
+                  e até o 'cry' do Pokémon, oferecendo valor prático e
                   divertido sem necessidade de setup ou dependências externas.
                 </>
               }
