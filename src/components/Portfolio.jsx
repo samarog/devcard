@@ -120,7 +120,7 @@ function Portfolio(props) {
                   O Codfish nasce da necessidade de criar uma ferramenta de
                   otimização de SEO para conteúdos em português. O objetivo é oferecer
                   insights quantitativos e qualitativos para melhorar as métricas de posicionamento
-                  dos motores de busca. Útil para escritores, jornalistas e profissionais de marketing de
+                  nos motores de busca. Útil para escritores, jornalistas e profissionais de marketing de
                   conteúdo. Com um protótipo escrito em vanilla{" "}
                   <strong>JavaScript</strong>, mais tarde o projeto foi
                   inteiramente convertido para <strong>React.js</strong>.
