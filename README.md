@@ -1,3 +1,0 @@
-# devcard
-
-@samarog
