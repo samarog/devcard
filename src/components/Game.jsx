@@ -43,7 +43,7 @@ const chapters = {
   frontend: {
     id: "frontend",
     title: "Skill Unlocked: Frontend",
-    text: "Do HTML e CSS ao JavaScript, jQuery, Bootstrap, LESS e React, gosto de transformar ideias em interfaces funcionais e intuitivas. No desenvolvimento profissional, trabalho com Razor e ASP.NET Core MVC, criando experiências responsivas, animações e componentes reutilizáveis. Procuro equilibrar criatividade, acessibilidade, performance e atenção ao detalhe.",
+    text: "Do HTML e CSS ao JavaScript, jQuery, Bootstrap, Tailwind, LESS e React, transformo ideias em interfaces funcionais e intuitivas. No desenvolvimento profissional, o Razor é a minha tela em branco, criando experiências responsivas, práticas e orientadas ao utilizador. Procuro equilibrar criatividade, acessibilidade, performance e atenção ao detalhe.",
     choices: [
       { label: "Backend & .NET", next: "backend" },
       { label: "Inteligência Artificial", next: "AI" },
@@ -54,7 +54,7 @@ const chapters = {
   backend: {
     id: "backend",
     title: "Skill Unlocked: Backend",
-    text: "Atualmente, trabalho sobretudo com C#, ASP.NET Core MVC, Entity Framework Core e LINQ, desenvolvendo aplicações web, funcionalidades de backoffice e integrações com sistemas externos. Tenho experiência com SQL Server, PostgreSQL, APIs REST, autenticação e arquitetura MVC. Antes do .NET, desenvolvi aplicações com Node.js e Express, uma experiência que me deu uma perspetiva mais abrangente do desenvolvimento backend.",
+    text: "É no ambiente .NET que me encontro atualmente. Atráves do C#, geralmente em arquiteturas ASP.NET Core MVC, planeio e desenvolvo aplicações web, funcionalidades de backoffice e integrações com sistemas externos. Tenho uma curta mas diária experiência com SQL Server, PostgreSQL. Antes do .NET, desenvolvi aplicações em Node.js e Express, uma experiência que me deu uma perspetiva mais abrangente do desenvolvimento backend multiplataforma.",
     choices: [
       { label: "Frontend", next: "frontend" },
       { label: "Inteligência Artificial", next: "AI" },
@@ -65,7 +65,7 @@ const chapters = {
   AI: {
     id: "AI",
     title: "Skill Unlocked: AI",
-    text: "A inteligência artificial tornou-se outra área do meu trabalho. Colaboro na investigação, desenvolvimento e integração de agentes de IA para soluções empresariais, recorrendo a plataformas como Chatbase e Botpress. Trabalho com prompt engineering, preparação de conteúdos e sistemas de recuperação de informação (RAG). Desenvolvi também uma ferramenta de otimização SEO para textos em português, com um agente de IA integrado, atualmente utilizada pela Webtexto.",
+    text: "A inteligência artificial tornou-se outra área fundamental do meu trabalho. Colaboro na investigação, desenvolvimento e integração de automações e soluções agênticas de IA para empresas, com recurso a plataformas como a Chatbase e o Botpress. Trabalho com prompt engineering, preparação de conteúdos e sistemas de recuperação de informação (RAG). Desenvolvi também uma ferramenta de otimização SEO para textos em português, com um agente de IA integrado, atualmente utilizada pela Webtexto.",
     choices: [
       { label: "Frontend", next: "frontend" },
       { label: "Backend & .NET", next: "backend" },
@@ -98,7 +98,7 @@ const chapters = {
   mestrado: {
     id: "mestrado",
     title: "Chapter 4: Level Up",
-    text: "Em 2026, iniciei o Mestrado em Informática Aplicada no Instituto Politécnico de Santarém. O objetivo é aprofundar os fundamentos técnicos por detrás das aplicações que desenvolvo. Entre os temas que estou a estudar encontram-se a computação em nuvem, virtualização, arquiteturas de software, segurança e programação avançada. É uma oportunidade para complementar a experiência prática com uma base académica mais sólida.",
+    text: "Em 2026, iniciei o Mestrado em Informática Aplicada no Instituto Politécnico de Santarém. O objetivo é aprofundar os fundamentos técnicos por detrás das aplicações que desenvolvo mas também absorver a big picture, porque um bom developer não é apenas um developer. Entre os temas que estou a estudar encontram-se a computação em nuvem, virtualização, arquiteturas de software, segurança e programação avançada (funcional e genética). É uma oportunidade para complementar a experiência prática com uma base académica mais sólida.",
     choices: [
       { label: "Projetos pessoais", next: "projetos" },
       { label: "Hard Skills", next: "solo" },
@@ -109,7 +109,7 @@ const chapters = {
   solo: {
     id: "solo",
     title: "Character Stats: Hard Skills",
-    text: "A minha principal stack é C#, ASP.NET Core MVC, Entity Framework Core, LINQ e SQL Server. No frontend, trabalho com JavaScript, Razor, jQuery, Bootstrap e LESS. Tenho também experiência com Node.js, Express, PostgreSQL, APIs REST, Git, Azure DevOps e Docker. Na área de IA, exploro agentes, integração de LLMs, RAG e prompt engineering. E continuo a desenvolver conhecimentos em Python, Linux e infraestrutura cloud.",
+    text: "A minha principal stack é C#, ASP.NET Core MVC, Entity Framework Core, LINQ e SQL Server. No frontend, trabalho frequentemente com JavaScript/jQuery e CSS vanilla ou Bootstrap. Tenho também experiência com Node.js, Express, PostgreSQL, APIs REST, Git, Azure DevOps e Docker. Na área de IA, exploro agentes, integração de LLMs, RAG e prompt engineering. E continuo a desenvolver conhecimentos em Python, Linux e infraestrutura cloud.",
     choices: [
       { label: "Soft Skills", next: "equipa" },
       { label: "Continuar ▸", next: "final" },
