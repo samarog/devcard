@@ -129,7 +129,7 @@ const chapters = {
   final: {
     id: "final",
     title: "To Be Continued...",
-    text: "De jornalista económico a software developer, o meu percurso tem sido feito de curiosidade, aprendizagem e novos desafios. Hoje, desenvolvo aplicações no ecossistema .NET, participo em projetos de inteligência artificial e continuo a aprofundar conhecimentos em Informática Aplicada. Ainda tenho muito para aprender, mas é precisamente isso que me motiva. O próximo capítulo? Ainda está por escrever.",
+    text: "De jornalista de economia a software developer, o meu percurso tem sido feito de curiosidade, aprendizagem e novos desafios. Hoje, desenvolvo aplicações no ecossistema .NET, participo em projetos de inteligência artificial e continuo a aprofundar conhecimentos em Informática Aplicada. Ainda tenho muito para aprender, mas é precisamente isso que me motiva. O próximo capítulo? Ainda está por escrever.",
     choices: [],
     ending: true,
   },
