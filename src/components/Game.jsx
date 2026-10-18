@@ -6,95 +6,130 @@ const chapters = {
   start: {
     id: "start",
     title: "Press Start",
-    text: "Olá, chamo meu nome é Gonçalo Amaro e sou programador recém-qualificado. Conheça um pouco da minha viagem até hoje.",
-    choices: [{ label: "Começar", next: "perfil" }],
+    text: "Olá! Sou o Gonçalo Amaro, software developer especializado em .NET, com um percurso pouco convencional entre o jornalismo, a tecnologia e a inteligência artificial. Esta é a história de como troquei as notícias pelo código. Preparado para jogar?",
+    choices: [{ label: "Começar ▸", next: "perfil" }],
   },
+
   perfil: {
     id: "perfil",
-    title: "Perfil",
-    text: "Após 10 anos de experiência em jornalismo económico, tomei a decisão de abraçar um novo desafio, e fiz a reconversão profissional para uma área que, de certa forma, sempre me acompanhou: a escrita. Agora numa linguagem diferente.",
+    title: "New Game",
+    text: "Durante quase uma década, acompanhei os mercados financeiros como jornalista económico. Hoje, desenvolvo aplicações web, integro soluções de inteligência artificial e frequento um mestrado em Informática Aplicada. A mudança de carreira não foi um recomeço do zero: foi uma oportunidade para aplicar competências antigas a problemas novos. Afinal, continuo a escrever. Só mudou a linguagem.",
     choices: [
-      { label: "O jornalismo", next: "jornalista" },
-      { label: "A programação", next: "primeiro_codigo" },
+      { label: "A primeira carreira", next: "jornalista" },
+      { label: "Hello, World!", next: "primeiro_codigo" },
     ],
   },
+
   jornalista: {
     id: "jornalista",
-    title: "Jornalismo",
-    text: "Após concluir a Licenciatura em Jornalismo na Escola Superior de Comunicação Social, acompanhei durante uma década os mercados financeiros, onde reportei histórias e testemunhei a História. Durante esse período, desenvolvi competências sólidas em análise de dados e gestão de bases de dados, a que juntei as primeiras noções de programação. O primeiro desafio? Desenvolver uma macro para o Word que facilitasse o nosso trabalho de leitura de documentos.",
-    choices: [{ label: "A programação", next: "primeiro_codigo" }],
+    title: "Chapter 1: The Origin Story",
+    text: "Licenciei-me em Jornalismo na Escola Superior de Comunicação Social e trabalhei durante quase uma década na Dow Jones, acompanhando a economia e os mercados financeiros. Entre notícias de última hora, análise de dados e investigação, aprendi a trabalhar com rigor, comunicar informação complexa e encontrar respostas sob pressão. A programação já espreitava: uma das minhas primeiras experiências foi desenvolver uma macro para Word que automatizava tarefas de leitura de documentos.",
+    choices: [
+      { label: "A mudança de carreira ▸", next: "primeiro_codigo" },
+    ],
   },
+
   primeiro_codigo: {
     id: "primeiro_codigo",
-    title: "Hello, World!",
-    text: "No início de 2025, decidi avançar para uma formação certificada em Full-stack Development. Completei o bootcamp da App Brewery (Londres), através da plataforma Udemy, onde dei os primeiros passos na produção de protótipos que mais tarde viriam a tornar-se MVPs.",
+    title: "Chapter 2: Hello, World!",
+    text: "Em 2025, aprofundei a minha reconversão profissional através de um bootcamp de Full-Stack Web Development da App Brewery, na Udemy. Comecei por desenvolver interfaces, APIs e aplicações completas com JavaScript, Node.js e PostgreSQL. Os primeiros exercícios deram lugar a projetos mais ambiciosos. Entretanto, encontrei no C# e no ecossistema .NET a minha principal área de especialização.",
     choices: [
       { label: "Frontend", next: "frontend" },
-      { label: "Back-end", next: "backend" },
-      { label: "Inteligência Artifical Generativa", next: "AI" },
+      { label: "Backend & .NET", next: "backend" },
+      { label: "Inteligência Artificial", next: "AI" },
     ],
   },
+
   frontend: {
     id: "frontend",
-    title: "Frontend",
-    text: "Em frontend, ajudei a transformar algumas ideias em interfaces, a trabalhar UI/UX, animações e performance, sempre com atenção ao detalhe e à experiência final do utilizador. Trabalhei em vários projetos em vanilla HTML, CSS e JavaScript, tendo também manipulado diversas bibliotecas como Bootstrap, jQuery e React.",
+    title: "Skill Unlocked: Frontend",
+    text: "Do HTML e CSS ao JavaScript, jQuery, Bootstrap, LESS e React, gosto de transformar ideias em interfaces funcionais e intuitivas. No desenvolvimento profissional, trabalho com Razor e ASP.NET Core MVC, criando experiências responsivas, animações e componentes reutilizáveis. Procuro equilibrar criatividade, acessibilidade, performance e atenção ao detalhe.",
     choices: [
-      { label: "Back-end", next: "backend" },
-      { label: "Inteligência Artifical Generativa", next: "AI" },
-      { label: "Continuar ▸", next: "freelance" },
+      { label: "Backend & .NET", next: "backend" },
+      { label: "Inteligência Artificial", next: "AI" },
+      { label: "Continuar ▸", next: "experiencia" },
     ],
   },
+
   backend: {
     id: "backend",
-    title: "Back-end",
-    text: "Na vertente back-end, criei aplicações em Express.js; concebi e mantive APIs REST/JSON; modelei e integrei dados em PostgreSQL; e implementei autenticação e autorização com foco na segurança (validação e sanitização de inputs, hashing de passwords).",
+    title: "Skill Unlocked: Backend",
+    text: "Atualmente, trabalho sobretudo com C#, ASP.NET Core MVC, Entity Framework Core e LINQ, desenvolvendo aplicações web, funcionalidades de backoffice e integrações com sistemas externos. Tenho experiência com SQL Server, PostgreSQL, APIs REST, autenticação e arquitetura MVC. Antes do .NET, desenvolvi aplicações com Node.js e Express, uma experiência que me deu uma perspetiva mais abrangente do desenvolvimento backend.",
     choices: [
       { label: "Frontend", next: "frontend" },
-      { label: "Inteligência Artifical Generativa", next: "AI" },
-      { label: "Continuar ▸", next: "freelance" },
+      { label: "Inteligência Artificial", next: "AI" },
+      { label: "Continuar ▸", next: "experiencia" },
     ],
   },
+
   AI: {
     id: "AI",
-    title: "IA conversacional",
-    text: "Design de workflows e treino de agentes de IA conversacional baseados em frameworks existentes. Criação e afinação de prompts, seleção e tratamento de dados para integração no RAG e outros recursos para a produção de agentes de conversação inteligentes para o ramo empresarial.",
+    title: "Skill Unlocked: AI",
+    text: "A inteligência artificial tornou-se outra área do meu trabalho. Colaboro na investigação, desenvolvimento e integração de agentes de IA para soluções empresariais, recorrendo a plataformas como Chatbase e Botpress. Trabalho com prompt engineering, preparação de conteúdos e sistemas de recuperação de informação (RAG). Desenvolvi também uma ferramenta de otimização SEO para textos em português, com um agente de IA integrado, atualmente utilizada pela Webtexto.",
     choices: [
       { label: "Frontend", next: "frontend" },
-      { label: "Back-end", next: "backend" },
-      { label: "Continuar ▸", next: "freelance" },
+      { label: "Backend & .NET", next: "backend" },
+      { label: "Continuar ▸", next: "experiencia" },
     ],
   },
-  freelance: {
-    id: "freelance",
-    title: "Freelance",
-    text: "Prazos, prioridades, entregas. Em cada projeto, um compromisso. Em 2025, estive envolvido nos primeiros projetos comerciais para o cliente final, com empresas de referência nos respetivos setores, como a Webtexto e a Centralmed.",
+
+  experiencia: {
+    id: "experiencia",
+    title: "Chapter 3: Production Mode",
+    text: "A programação deixou de ser apenas aprendizagem e passou a fazer parte do meu dia a dia profissional. Entre o estágio em desenvolvimento web na Bomsite e o trabalho na Webtexto, tenho participado na construção e manutenção de websites, aplicações e soluções internas. Desenvolvimento de funcionalidades, resolução de problemas, integração de APIs e colaboração com equipas técnicas são agora parte da rotina. E descobri que o verdadeiro desafio começa quando o código chega à produção.",
     choices: [
-      { label: "Soft skills", next: "equipa" },
-      { label: "Continuar ▸", next: "solo" },
+      { label: "Projetos pessoais", next: "projetos" },
+      { label: "Mestrado", next: "mestrado" },
+      { label: "Hard Skills", next: "solo" },
     ],
   },
+
+  projetos: {
+    id: "projetos",
+    title: "Side Quests",
+    text: "Fora do trabalho, continuo a experimentar. Desenvolvi o Escriba, uma aplicação full-stack com Node.js, Express e PostgreSQL, e estou a trabalhar no TypePeek, uma extensão para Visual Studio que pretende facilitar a exploração de estruturas de tipos C# através de visualizações hierárquicas. São projetos diferentes, mas com algo em comum: aprender através da construção de ferramentas que resolvem problemas concretos.",
+    choices: [
+      { label: "Mestrado", next: "mestrado" },
+      { label: "Hard Skills", next: "solo" },
+      { label: "Continuar ▸", next: "final" },
+    ],
+  },
+
+  mestrado: {
+    id: "mestrado",
+    title: "Chapter 4: Level Up",
+    text: "Em 2026, iniciei o Mestrado em Informática Aplicada no Instituto Politécnico de Santarém. O objetivo é aprofundar os fundamentos técnicos por detrás das aplicações que desenvolvo. Entre os temas que estou a estudar encontram-se a computação em nuvem, virtualização, arquiteturas de software, segurança e programação avançada. É uma oportunidade para complementar a experiência prática com uma base académica mais sólida.",
+    choices: [
+      { label: "Projetos pessoais", next: "projetos" },
+      { label: "Hard Skills", next: "solo" },
+      { label: "Soft Skills", next: "equipa" },
+    ],
+  },
+
   solo: {
     id: "solo",
-    title: "Hard Skills",
-    text: "Web developer com conhecimento em frontend (HTML, CSS, JavaScript, React, Bootstrap/jQuery) e back-end em Node.js/Express, PostgreSQL e API/REST. Experiência em IA conversacional, com foco em plataformas como Botpress e Chatbase.",
+    title: "Character Stats: Hard Skills",
+    text: "A minha principal stack é C#, ASP.NET Core MVC, Entity Framework Core, LINQ e SQL Server. No frontend, trabalho com JavaScript, Razor, jQuery, Bootstrap e LESS. Tenho também experiência com Node.js, Express, PostgreSQL, APIs REST, Git, Azure DevOps e Docker. Na área de IA, exploro agentes, integração de LLMs, RAG e prompt engineering. E continuo a desenvolver conhecimentos em Python, Linux e infraestrutura cloud.",
     choices: [
       { label: "Soft Skills", next: "equipa" },
       { label: "Continuar ▸", next: "final" },
     ],
   },
+
   equipa: {
     id: "equipa",
-    title: "Soft Skills",
-    text: "Capacidade de trabalho em equipa, vontade de aprender e de evoluir. Considero-me metódico e rigoroso, características que transportei para a área de IT, onde aplico a mesma disciplina analítica, capacidade de investigação e atenção ao detalhe que marcaram a minha carreira anterior.",
+    title: "Character Stats: Soft Skills",
+    text: "O jornalismo ensinou-me a investigar, questionar, comunicar com clareza e trabalhar sob pressão. A programação acrescentou novas formas de aplicar essas competências: decompor problemas complexos, colaborar com equipas multidisciplinares e aprender continuamente. Valorizo o rigor, a autonomia e a capacidade de reconhecer aquilo que ainda não sei. Porque encontrar a solução começa, muitas vezes, por fazer a pergunta certa.",
     choices: [
       { label: "Hard Skills", next: "solo" },
       { label: "Continuar ▸", next: "final" },
     ],
   },
+
   final: {
     id: "final",
-    title: "O próximo passo",
-    text: "O meu próximo projeto pode ser na sua empresa. Embora ainda júnior, reúno uma base aceitável em front-end e backend, com conhecimento de várias interfaces e frameworks sobretudo em JavaScript, a que junto uma experiência mais consolidada na integração de IA conversacional junto do cliente final. Mantenho-me focado em aprender, colaborar e entregar valor de forma consistente em cada desafio.",
+    title: "To Be Continued...",
+    text: "De jornalista económico a software developer, o meu percurso tem sido feito de curiosidade, aprendizagem e novos desafios. Hoje, desenvolvo aplicações no ecossistema .NET, participo em projetos de inteligência artificial e continuo a aprofundar conhecimentos em Informática Aplicada. Ainda tenho muito para aprender, mas é precisamente isso que me motiva. O próximo capítulo? Ainda está por escrever.",
     choices: [],
     ending: true,
   },
