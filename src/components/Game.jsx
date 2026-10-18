@@ -204,7 +204,7 @@ export default function Game(props) {
             </button>
             <button className="btn-cv">
               <a
-                href="https://resume.io/r/26b7ZxqFw"
+                href="https://goncalo-amaro.tiiny.site/"
                 download="GoncaloAmaro-CV"
                 target="_blank"
               >
