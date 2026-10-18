@@ -6,14 +6,14 @@ const chapters = {
   start: {
     id: "start",
     title: "Press Start",
-    text: "Olá! Sou o Gonçalo Amaro, software developer especializado em .NET, com um percurso pouco convencional entre o jornalismo, a tecnologia e a inteligência artificial. Esta é a história de como troquei as notícias pelo código. Preparado para jogar?",
+    text: "Olá! Chamo-me Gonçalo Amaro e sou software developer. Com um percurso pouco convencional, comecei no jornalismo e na economia, antes de fazer a ponte para a tecnologia e programação. Conto-vos a história de como troquei as notícias pelo código. Vamos a isso?",
     choices: [{ label: "Começar ▸", next: "perfil" }],
   },
 
   perfil: {
     id: "perfil",
     title: "New Game",
-    text: "Durante quase uma década, acompanhei os mercados financeiros como jornalista económico. Hoje, desenvolvo aplicações web, integro soluções de inteligência artificial e frequento um mestrado em Informática Aplicada. A mudança de carreira não foi um recomeço do zero: foi uma oportunidade para aplicar competências antigas a problemas novos. Afinal, continuo a escrever. Só mudou a linguagem.",
+    text: "Durante quase uma década, acompanhei os mercados financeiros enquanto jornalista. Hoje, desenvolvo aplicações web, integro soluções determinísticas e de inteligência artificial e, atualmente, frequento um mestrado em Informática Aplicada na Escola Superior de Gestão e Tecnologia de Santarém. A mudança de carreira não foi um reset: foi uma oportunidade para aplicar competências antigas a problemas novos. Afinal, continuo a escrever: só mudou a linguagem.",
     choices: [
       { label: "A primeira carreira", next: "jornalista" },
       { label: "Hello, World!", next: "primeiro_codigo" },
@@ -22,8 +22,8 @@ const chapters = {
 
   jornalista: {
     id: "jornalista",
-    title: "Chapter 1: The Origin Story",
-    text: "Licenciei-me em Jornalismo na Escola Superior de Comunicação Social e trabalhei durante quase uma década na Dow Jones, acompanhando a economia e os mercados financeiros. Entre notícias de última hora, análise de dados e investigação, aprendi a trabalhar com rigor, comunicar informação complexa e encontrar respostas sob pressão. A programação já espreitava: uma das minhas primeiras experiências foi desenvolver uma macro para Word que automatizava tarefas de leitura de documentos.",
+    title: "Chapter 1: The Origins",
+    text: "Licenciei-me em Jornalismo na Escola Superior de Comunicação Social e e passei os dez anos seguintes na Dow Jones, um braço do Wall Street Journal, onde acompanhei diariamente os mercados financeiros. Em regime de spped desk, as decisões rápidas e o breaking news environment marcaram esse percurso, pautado também pela análise de dados e investigação. Lá aprendi o valor do rigor, da comunicação precisa e a encontrar respostas sob pressão. A programação já espreitava: uma das minhas primeiras experiências foi desenvolver macros para Word, que automatizavam tarefas relacionadas com os nossos documentos.",
     choices: [
       { label: "A mudança de carreira ▸", next: "primeiro_codigo" },
     ],
@@ -32,7 +32,7 @@ const chapters = {
   primeiro_codigo: {
     id: "primeiro_codigo",
     title: "Chapter 2: Hello, World!",
-    text: "Em 2025, aprofundei a minha reconversão profissional através de um bootcamp de Full-Stack Web Development da App Brewery, na Udemy. Comecei por desenvolver interfaces, APIs e aplicações completas com JavaScript, Node.js e PostgreSQL. Os primeiros exercícios deram lugar a projetos mais ambiciosos. Entretanto, encontrei no C# e no ecossistema .NET a minha principal área de especialização.",
+    text: "Em 2025, decidi materializar a minha reconversão profissional através de um bootcamp de Full Stack Web Development leccionado pela App Brewery. Comecei por desenvolver interfaces, APIs e aplicações em JavaScript, Node.js e PostgreSQL. Os primeiros exercícios deram lugar a projetos mais ambiciosos. Entretanto, encontrei no C# e no ecossistema .NET a minha principal área de especialização profissional.",
     choices: [
       { label: "Frontend", next: "frontend" },
       { label: "Backend & .NET", next: "backend" },
