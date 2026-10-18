@@ -7,7 +7,7 @@ function Footer(props) {
   return (
     <footer className="footer">
       <p className="footnote">
-        {code} Junior web developer © {props.today}{" "}
+        {code} Web Developer © {props.today}{" "}
       </p>
       <a
         href="https://github.com/samarog"
